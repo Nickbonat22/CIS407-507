@@ -1,0 +1,30 @@
+<idea-plugin>
+    <id>python.typing.adder</id>
+    <name>python-typing-adder</name>
+    <version>1.0</version>
+    <vendor email="nickjbonat@@gmail.com">nickbonat</vendor>
+
+
+    <idea-version since-build="145.0"/>
+
+    <depends>com.intellij.modules.lang</depends>
+    <depends optional="true">com.intellij.modules.python</depends>
+    <depends optional="true">Pythonid</depends>
+    <depends optional="true">PythonCore</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action id="LPPythonTypeInfoAdded" class="PythonTypeInfoAddedAction" text="add type comments">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift Y"/>
+        </action>
+
+        <action id="docstring-gen"
+                class="DocStringGen"
+                text="Generate Doc String" description="Generate a doc string!">
+            <add-to-group group-id="GenerateGroup" anchor="last"/>
+        </action>
+    </actions>
+
+</idea-plugin>
